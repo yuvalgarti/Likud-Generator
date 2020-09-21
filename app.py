@@ -4,10 +4,6 @@ from flask import Flask
 app = Flask(__name__)
 
 
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', debug=False)
-
-
 @app.route('/')
 def generate_likud_message():
     is_collab = None
@@ -25,3 +21,7 @@ def generate_likud_message():
 def random_line_from_staticfiles(filename):
     with open('staticfiles/' + filename, encoding="utf8") as file:
         return random.choice(file.readlines())
+
+
+if __name__ == "__main__":
+    app.run(debug=False)
