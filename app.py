@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def hello_world():
+def generate_likud_message():
     is_collab = None
     if random.random() > 0.5:
         is_collab = random_line_from_staticfiles('collab.txt')
@@ -18,6 +18,6 @@ def hello_world():
                            ending=random_line_from_staticfiles('ending.txt'))
 
 
-def random_line_from_staticfiles(path):
-    with open('staticfiles/' + path, encoding="utf8") as file:
+def random_line_from_staticfiles(filename):
+    with open('staticfiles/' + filename, encoding="utf8") as file:
         return random.choice(file.readlines())
