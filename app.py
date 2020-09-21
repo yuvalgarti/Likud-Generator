@@ -4,6 +4,10 @@ from flask import Flask
 app = Flask(__name__)
 
 
+if __name__ == "__main__":
+    app.run(debug=False)
+
+
 @app.route('/')
 def generate_likud_message():
     is_collab = None
