@@ -2,16 +2,18 @@
 <html>
 <head>
   <title>Likud Comment Generator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
 </head>
 <body>
 
-<div  dir="rtl" style="font-family:'Calibri Light'">
+<div  dir="rtl" style="font-family:'Calibri Light'" class="text-right">
 
-<h1>תגובת <img src="{{url_for('static', filename='likud-logo.png')}}" alt="likud-logo" style="width: 8%; height: 8%">:</h1>
+<h1>תגובת <img class="align-top" src="{{url_for('static', filename='likud-logo.png')}}" alt="likud-logo" style="width: 130px; height: auto;">:</h1>
 <h3>{{ before }}{{ name }} {{ nickname }} {% if collab is not none %} בשיתוף עם {{ collab }} {% endif %}{{ action }}<br>{{ ending }}</h3>
 
 <input type="button" name="newComment" value="צור תגובה חדשה" onclick="location.reload();">
-
+<br><br>
 <h6>Created by <a href="https://twitter.com/YuvalGarti">Yuval Garti</a></h6>
 </div>
 
