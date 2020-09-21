@@ -19,7 +19,7 @@ def generate_likud_message():
 
 
 def random_line_from_staticfiles(filename):
-    with open('staticfiles/' + filename, encoding="utf8") as file:
+    with open('static/' + filename, encoding="utf8") as file:
         return random.choice(file.readlines())
 
 
