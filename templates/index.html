@@ -10,6 +10,8 @@
 <h1>תגובת <img src="{{url_for('static', filename='likud-logo.png')}}" alt="likud-logo" style="width: 8%; height: 8%">:</h1>
 <h3>{{ before }}{{ name }} {{ nickname }} {% if collab is not none %} בשיתוף עם {{ collab }} {% endif %}{{ action }}<br>{{ ending }}</h3>
 
+<input type="button" name="newComment" value="צור תגובה חדשה" onclick="location.reload();">
+
 <h6>Created by <a href="https://twitter.com/YuvalGarti">Yuval Garti</a></h6>
 </div>
 
