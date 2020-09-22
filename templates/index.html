@@ -1,21 +1,54 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Likud Comment Generator</title>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Likud Comment Generator</title>
+
+    <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-</head>
-<body>
+<meta name="theme-color" content="#1f5aa5">
 
-<div  dir="rtl" style="font-family:'Calibri Light'; padding-right: 10px" class="text-right">
 
-<h1>תגובת <img class="align-top" src="{{url_for('static', filename='likud-logo.png')}}" alt="likud-logo" style="width: 130px; height: auto;">:</h1>
-<h3>{{ before }}{{ name }} {{ nickname }} {% if collab is not none %} בשיתוף עם {{ collab }} {% endif %}{{ action }}<br>{{ ending }}</h3>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
 
-<input type="button" name="newComment" value="צור תגובה חדשה" onclick="location.reload();">
-<br><br>
-<h6>Created by <a href="https://twitter.com/YuvalGarti">Yuval Garti</a></h6>
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="{{url_for('static', filename='cover.css')}}" rel="stylesheet">
+  </head>
+  <body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+  <main dir="rtl" role="main" class="inner cover vertical-center" style="margin-top: 5%">
+    <h1 class="cover-heading">תגובת הליכוד</h1> 
+    <p class="lead">{{ before }}{{ name }} {{ nickname }} {% if collab is not none %} בשיתוף עם {{ collab }} {% endif %}{{ action }}<br>{{ ending }}</p>
+    <p class="lead">
+      <a href="/" class="btn btn-md btn-secondary">צור תגובה חדשה</a>
+    </p>
+  </main>
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p>Created by <a href="https://twitter.com/YuvalGarti">Yuval Garti</a></p>
+      <small class="small">Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</small>
+    </div>
+  </footer>
 </div>
 
-</body>
-</html>
+
+</body></html>
